@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Admission Form</title>
+</head>
+
+<body>
+
+<h2>Admission Registration Form</h2>
+
+<form onsubmit="showMessage(); return false;">
+
+    Name:
+    <input type="text" name="name">
+    <br><br>
+
+    Email:
+    <input type="email" name="email">
+    <br><br>
+
+    Gender:
+    <input type="radio" name="gender"> Male
+    <input type="radio" name="gender"> Female
+    <br><br>
+
+    Date of Birth:
+    <input type="date" name="dob">
+    <br><br>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+<script>
+
+function showMessage()
+{
+    alert("Admission Registration Done\n\nYour application has been submitted successfully. Please wait for further communication.");
+}
+
+</script>
+
+</body>
+</html>
