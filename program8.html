@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Simple Calculator</title>
+
+    <style>
+
+        body{
+            text-align:center;
+            font-family:Arial;
+            margin-top:50px;
+        }
+
+        input, select, button{
+            padding:8px;
+            margin:5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Simple Calculator</h2>
+
+    <input type="number" id="num1" placeholder="First Number">
+
+    <input type="number" id="num2" placeholder="Second Number">
+
+    <br>
+
+    <select id="op">
+
+        <option value="+">+</option>
+
+        <option value="-">-</option>
+
+        <option value="*">*</option>
+
+        <option value="/">/</option>
+
+    </select>
+
+    <button onclick="calc()">
+        Calculate
+    </button>
+
+    <h3 id="result"></h3>
+
+
+    <script>
+
+        function calc(){
+
+            var a =
+            parseInt(document.getElementById("num1").value);
+
+            var b =
+            parseInt(document.getElementById("num2").value);
+
+            var op =
+            document.getElementById("op").value;
+
+            var ans;
+
+            switch(op){
+
+                case "+":
+                    ans = a + b;
+                    break;
+
+                case "-":
+                    ans = a - b;
+                    break;
+
+                case "*":
+                    ans = a * b;
+                    break;
+
+                case "/":
+                    ans = a / b;
+                    break;
+            }
+
+            document.getElementById("result").innerHTML =
+            "Result = " + ans;
+
+        }
+
+    </script>
+
+</body>
+</html>
